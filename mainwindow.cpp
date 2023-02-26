@@ -53,7 +53,7 @@ void MainWindow::on_actionOpen_triggered()
 void MainWindow::on_actionSaveAs_triggered()
 {
     QString date = this->windowTitle();
-    QString fileName = QFileDialog::getSaveFileName(this, "Save as", date);
+    QString fileName = QFileDialog::getSaveFileName(this, "Save as", date+".txt");
     QFile file(fileName);
     currentFile = fileName;
 
