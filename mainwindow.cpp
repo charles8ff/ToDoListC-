@@ -21,7 +21,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_Calendar_clicked(const QDate &date)
 {
     QWidget::setWindowTitle (date.toString());
-    qDebug() << date.toString();
+    // qDebug() << date.toString();
 }
 
 
@@ -61,7 +61,7 @@ void MainWindow::on_actionSaveAs_triggered()
            QMessageBox::warning(this, "Warning", "Cannot save file: " + file.errorString());
            return;
        }
-    qDebug() << currentFile;
+    // qDebug() << currentFile;
 
     QTextStream out(&file);
     QString text = ui->plainTextEdit->toPlainText();
